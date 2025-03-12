@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  
+    background: black;
+}
+body.ready {
+    overflow: unset;
+    overflow-x: hidden !important;
+}
+.scene, canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    outline: none !important;
+}
+section {
+    height: 100vh;
+    width: 100vw;
+}
+section:is(.sec-1, .sec-3, .sec-5) {
+    background: lightgrey;
+}
+section:is(.sec-2, .sec-4) {
+    background: gainsboro;
+}
+#loading-screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    background: gainsboro;
+    color: #333;
+    font-size: 40px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: 1s opacity;
+}
+#loading-screen.finished {
+    opacity: 0;
+}
